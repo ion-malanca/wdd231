@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231, Ion Malanca, Course Home Page">
+    <meta name="author" content="Ion Malanca">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-large.css">
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Capital Commerce Moldova Website Logo">
+        </div>
+        <h1>Capitol Commerce Moldova</h1>
+        <button class="hamburger" id="hamburger">☰</button>
+        <nav>
+            <ul class="navigation" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="-">Chamber Project</a></li>
+                <li><a href="-">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Ion Malanca, a student, community leader, and founder passionate about connecting people, ideas, and opportunities across Moldova and beyond.
+            Over the years, I've worked with international programs, humanitarian projects, and youth initiatives that helped shape my perspective on leadership and service. I enjoy building meaningful connections, helping others grow, and creating spaces where people can learn from each other.</p>
+        </section>
+
+        <section class="photo">
+            <h2>Student Photo</h2>
+            <img src="images/student-photo.jpg" alt="Ion Malanca's picture">
+        </section>
+
+        <section class="classes">
+            <h2>Web Certificate Courses</h2>
+            <div class="buttons">
+                <button type="button" id="all-btn">All</button>
+                <button type="button" id="cse-btn">CSE</button>
+                <button type="button" id="wdd-btn">WDD</button>
+            </div>
+            <div id="course-container"></div>
+            <p>The total credits for courses listed above is <span id="credits"></span> </p>
+        </section>
+
+        <div class="social">
+            <a href="https://www.facebook.com/malanca.ion.5" target="_blank"><img src="images/facebook.png"></a>
+            <a href="https://github.com/ion-malanca" target="_blank"><img src="images/github.png"></a>
+            <a href="https://www.instagram.com/ionmalancaa/" target="_blank"><img src="images/instagram.png"></a>
+        </div>
+    </main>
+    <footer>
+        <h3 class="copy">©<span id="currentYear"></span> ⚪ Ion Malanca ⚪ Moldova</h3>
+        <h3 class="modification">Last Modification: <span id="lastModified"></span></h3>
+    </footer>
+</body>
+</html>
