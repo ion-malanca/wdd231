@@ -186,6 +186,7 @@ main h1 {
     justify-content: center;
     gap: 3px;
     margin-bottom: 5px;
+    color: rgba(255, 255, 255);
 }
 
 .social {
