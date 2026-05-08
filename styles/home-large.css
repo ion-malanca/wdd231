@@ -1,0 +1,140 @@
+@media (min-width: 600px) {
+    body {
+        max-width: none;
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url("../images/background.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    header {
+        height: 150px;
+    }
+
+    header img {
+        height: 120px;
+    }
+
+    header h1{
+        font-size: 50px;
+        margin-left: 18px;
+    }
+
+    .navigation {
+        display: flex;
+        margin-top: 30px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        gap: 60px;
+        padding-left: 30px;
+    }
+
+    .navigation a {
+        font-size: 30px;
+    }
+
+    main h1 {
+        margin-top: 80px;
+        margin-left: 40px;
+        font-size: 50px;
+    }
+
+    .student {
+        display: flex;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .about h2, .photo h2, .classes h2 {
+        font-size: 30px;
+    }
+
+    .about {
+        width: 870px;
+    }
+
+    .photo img {
+        width: 420px;
+    }
+
+    .photo {
+        width: 480px;
+    }
+
+    .photo h2 {
+        width: 480px;
+    }
+
+    .about h2 {
+        width: 870px;
+    }
+
+    .about p {
+        font-size: 30px;
+    }
+
+    .moving {
+        display: flex;
+        justify-content: center;
+    }
+
+    .classes, .classes h2 {
+        width: 1380px;
+    }
+
+    .buttons {
+        gap: 30px;
+    }
+
+    .buttons button {
+        width: 350px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .classes {
+        align-items: center;
+    }
+
+    .list {
+        width: 1110px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+        justify-items: center;
+        column-gap: 25px;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+
+    .course {
+        margin: 0%;
+        width: 350px;
+        height: 40px;
+        font-size: 15px;
+        align-items: center;
+    }
+
+    .classes p {
+        margin: 15px;
+        font-size: 25px;
+    }
+
+    .social {
+        width: 1380px;
+    }
+
+    .centering {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}

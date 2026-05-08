@@ -53,7 +53,7 @@ function displayCourses(courseList) {
         `;
         container.appendChild(card);
     });
-    creditsDisplay.textContent = totalCredits;
+    creditsDisplay.textContent = " " + totalCredits;
 }
 
 displayCourses(classes);
