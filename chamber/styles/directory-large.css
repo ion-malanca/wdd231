@@ -1,9 +1,6 @@
 @media (min-width: 600px) {
     body {
         max-width: none;
-        background-image: url("images/background-image-large.jpg");
-        background-size: cover;
-        background-position: center;
     }
 
     header {
@@ -26,6 +23,21 @@
 
     main h1 {
         margin-left: 20px;
+    }
+
+    .bg-image {
+        display: none;
+    }
+
+    .bg-image-large {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
     }
 
     .navigation {
