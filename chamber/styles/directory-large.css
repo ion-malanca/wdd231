@@ -1,7 +1,7 @@
 @media (min-width: 600px) {
     body {
         max-width: none;
-        background-image: url("../images/background-image-large.jpg");
+        background-image: url("images/background-image-large.jpg");
         background-size: cover;
         background-position: center;
     }
@@ -22,6 +22,10 @@
     header h2{
         font-size: 30px;
         margin-left: 18px;
+    }
+
+    main h1 {
+        margin-left: 20px;
     }
 
     .navigation {

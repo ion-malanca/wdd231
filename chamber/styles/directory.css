@@ -7,7 +7,7 @@
 
 body {
     max-width: 400px;
-    background-image: url("../images/backgroung-image-small.jpg");
+    background-image: url("images/backgroung-image-small.jpg");
     background-size: 400px auto;
     background-position: left top;
     background-repeat: no-repeat;
@@ -75,6 +75,12 @@ li {
 li:hover {
     background-color: rgba(206, 17, 96);
     color: rgba(255, 255, 255);
+}
+
+main h1 {
+    display: flex;
+    color: black;
+    text-align: center;
 }
 
 .cards {

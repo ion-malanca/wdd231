@@ -24,7 +24,7 @@ listBtn.addEventListener("click", () => {
 
 async function loadCompanies() {
   try {
-    const response = await fetch("scripts/members.json");
+    const response = await fetch("data/members.json");
 
     if (!response.ok) {
       throw new Error("Failed to load members.json");
