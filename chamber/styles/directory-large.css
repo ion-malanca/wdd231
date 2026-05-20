@@ -1,0 +1,67 @@
+@media (min-width: 600px) {
+    body {
+        max-width: none;
+        background-image: url("../images/background-image-large.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        align-items: center;
+        height: 110px;
+    }
+
+    header nav {
+        margin-top: 0;
+    }
+
+    header img {
+        height: 80px;
+    }
+
+    header h2{
+        font-size: 30px;
+        margin-left: 18px;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        width: auto;
+        background: none;
+        padding: 0;
+        margin-left: 500px;
+    }
+
+    .navigation a {
+        font-size: 25px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        text-align: left;
+    }
+
+    .list-view {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-info p {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
