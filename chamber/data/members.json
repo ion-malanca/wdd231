@@ -1,7 +1,7 @@
 [
   {
     "name": "Moldcell",
-    "address": "Str. Stefan cel Mare 115, Chișinău, Moldova",
+    "address": "Stefan Mare 115",
     "phone": "+373 600 111 22",
     "website": "https://moldcell.md/",
     "image": "https://play-lh.googleusercontent.com/v5tliGvWUkP3461A9HbFEV0j6V6hpQZVaAZ6bPQvSHnJG2UUpelCHivddWpYJxRK21Q",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Unifun",
-    "address": "Bd. Dacia 45, Chișinău, Moldova",
+    "address": "Bd. Dacia 45",
     "phone": "+373 600 222 33",
     "website": "https://unifun.com",
     "image": "https://unifun.com/wp-content/uploads/2017/08/unifun_logo.png",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Linella",
-    "address": "Str. Alba Iulia 10, Chișinău, Moldova",
+    "address": "Str. Alba Iulia 10",
     "phone": "+373 600 333 44",
     "website": "https://linella.md/ro",
     "image": "https://rabota-md-prod.s3.amazonaws.com/images/uploads/2023_09_25_11_37_31_logo_fb.png",
@@ -31,7 +31,7 @@
   },
   {
     "name": "La Placinte",
-    "address": "Str. Industriala 8, Chișinău, Moldova",
+    "address": "Str. Industriala 8",
     "phone": "+373 600 444 55",
     "website": "https://laplacinte.md/ro?gad_source=1&gad_campaignid=23111925064&gbraid=0AAAAAC1eoh8HApL885Kl9HdzQlaWhzF8x&gclid=Cj0KCQjwlLDQBhDjARIsAPlIefGkHhw6zBTtYnTi_k8QZFnISPhpKNyTNEEL00D5JAWjZGakEdiBpbkaAs-MEALw_wcB",
     "image": "https://libercard.md/storage/partner/June2022/L7pUn0fiHlGnvgJC0rkj.png",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Andy's",
-    "address": "Str. Calea Basarabiei 22, Chișinău, Moldova",
+    "address": "Str. Calea Basarabiei 22",
     "phone": "+373 600 555 66",
     "website": "https://www.andys.md/?gad_source=1&gad_campaignid=23777668694&gbraid=0AAAAAomCv6hUJe2-jsRY0AQX2mIlLRW8Z&gclid=CjwKCAjwt7XQBhBkEiwAtStppwdo5_op_T0jESXFsh7nD5e7Knn8xemW8ZNQN_QNcFHVEG3byrovqhoCm5oQAvD_BwE",
     "image": "https://shoppingmalldova.md/wp-content/uploads/2022/09/Andys_logo.png",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Petrom",
-    "address": "Str. Armeneasca 30, Chișinău, Moldova",
+    "address": "Str. Armeneasca 30",
     "phone": "+373 600 666 77",
     "website": "https://www.petrom.md/ro",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHtqB3kNbD7_m8jYM5sQRO0CfnSDqJnEeHEg&s",
@@ -61,7 +61,7 @@
   },
   {
     "name": "MAIB",
-    "address": "Str. 31 August 1989, Chișinău, Moldova",
+    "address": "Str. 31 August 1989",
     "phone": "+373 600 777 88",
     "website": "https://www.maib.md/ro",
     "image": "https://play-lh.googleusercontent.com/bg-VhuZhJDnq8_RFolfEH1lDAUc0CYOggn61meBWTSx-dBdlG6EMbJnctc_vKwNd2PI",

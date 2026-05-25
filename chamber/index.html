@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231, Ion Malanca, This is the home page for the Chamber of Commerce Project">
+    <meta name="author" content="Ion Malanca">
+    <title>Chamber Directory Page | WDD 231 | Ion Malanca</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-large.css">
+    <script src="scripts/home.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+    <meta property="og:title" content="Capitol Commerce Moldova" />
+    <meta property="og:description" content="Directory and resources for businesses in Moldova. Join, discover, and connect with local commerce." />
+    <meta property="og:image" content="https://ion-malanca.github.io/wdd231/images/logo-icon.png">
+    <meta property="og:url" content="https://ion-malanca.github.io/wdd231/" />
+    <meta property="og:type" content="website" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo-icon.jpg" alt="Capital Commerce Moldova Website Logo">
+        </div>
+        <h2>Capitol Commerce Moldova</h2>
+        <button class="hamburger" id="hamburger">☰</button>
+        <nav>
+            <ul class="navigation" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="images/hero-image.jpg" alt="Moldova Banner">
+            <a class="hero-btn" href="join.html">Join Now</a>
+        </div>
+
+        <h1>Home</h1>
+
+        <div class="data">
+            <div class="event">
+                <h2>Events</h2>
+                <div id="events" class="events"></div>
+            </div>
+
+            <div class="weather">
+                <h2>Current Weather</h2>
+                <div class="double">
+                    <img src="images/weather-icon.png">
+                    <div id="current-weather" class="current-weather"></div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast" class="forecasts"></div>
+            </div>
+        </div>
+
+        <div id="cards" class="cards"></div>
+    </main>
+    <footer>
+        <div class="unu">
+            <p class="prima">Capitol Commerce Moldova</p>
+            <p>Str. Vasile Alecsandri 41/1</p>
+            <p>Chisinau, Moldova MD-2003</p>
+            <p>info@commercemoldova.org</p>
+            <p>+373 68 84 13 30</p>
+        </div>
+
+        <div class="doi">
+            <a href="https://www.facebook.com/malanca.ion.5" target="_blank"><img src="images/facebook-icon.png" alt="Link To Facebook account"></a>
+            <a href="https://github.com/ion-malanca" target="_blank"><img src="images/github-icon.png" alt="Link To GitHub account"></a>
+            <a href="https://www.instagram.com/ionmalancaa/" target="_blank"><img src="images/instagram-icon.png" alt="Link To Instagram account"></a>
+        </div>
+
+        <div class="trei">
+            <p>WDD231 Class Project</p>
+            <p>Ion Malanca</p>
+            <p>© <span id="currentYear"></span> Capitol Commerce Moldova</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

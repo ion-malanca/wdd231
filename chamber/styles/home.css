@@ -1,0 +1,292 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    color: rgba(255, 255, 255);
+}
+
+body {
+    max-width: 400px;
+}
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.bg-image-large {
+    display: none;
+}
+
+header {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    background-color: black;
+}
+
+header img {
+    height: 60px;
+}
+
+header h2{
+    font-size: 17px;
+    color: rgba(255, 255, 255);
+    margin-left: 10px;
+}
+
+.hamburger {
+    display: flex;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255);
+    margin-left: 50px;
+    position: relative;
+    top: -3px;
+}
+
+header nav {
+    margin-top: 65px;
+}
+
+.navigation {
+    display: none;
+    gap: 20px;
+    font-size: 1rem;
+    padding: 1rem;
+    list-style-type: none;
+    width: 400px;
+    background-color: rgba(11, 16, 23);
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+}
+
+.navigation.active {
+    display: grid;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+li {
+    padding: 5px;
+    transition-duration: 0.4s;
+}
+
+li:hover {
+    background-color: rgba(206, 17, 96);
+    color: rgba(255, 255, 255);
+}
+
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+}
+
+.hero-btn {
+    position: absolute;
+    top: 31.5%;
+    left: 8%;
+
+    padding: 5px 20px;
+    background-color: #FF2442;
+    color: white;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+main {
+    background-color: #FFEDDA;
+}
+
+main h1 {
+    color: black;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.data {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.event, .weather, .forecast {
+    background-color: rgb(61, 178, 255, 0.6);
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.data h2 {
+    display: flex;
+    background-color: #FF2442;
+    width: 100%;
+    padding: 5px;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.events, .double, .forecasts {
+    padding: 10px;
+}
+
+.event-card {
+    margin-bottom: 10px;
+}
+
+.event-card h3, .card h3 {
+    color: black;
+    margin-bottom: 5px;
+}
+
+.event-card strong, .forecast-day strong, .card strong {
+    color: black;
+}
+
+.data p, .cards p {
+    color: black;
+}
+
+.double {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.double img {
+    width: 100%;
+}
+
+.current-weather p {
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.forecasts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-weather {
+    margin-left: 15px;
+}
+
+.forecast-day p {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+.cards {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    background-color: rgb(3, 174, 210);
+    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.card hr {
+    border: none;
+    border-top: 2px solid black;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.top h3 {
+    font-size: xx-large;
+}
+
+.top p, .detail p {
+    font-size: larger;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+
+.detail img {
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.detail a {
+    color: #F45B26;
+}
+
+.detail p {
+    margin-bottom: 15px;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+    gap: 20px;
+}
+
+.unu p, .trei p{
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.prima {
+    font-weight: bolder;
+}
+
+.doi img {
+    width: 70px;
+}
+
+.doi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
