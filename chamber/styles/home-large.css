@@ -4,6 +4,7 @@
     }
 
     header {
+        display: flex;
         align-items: center;
         height: 110px;
     }
@@ -25,31 +26,19 @@
         margin-left: 20px;
     }
 
-    .bg-image {
-        display: none;
-    }
-
-    .bg-image-large {
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -1;
-    }
-
     .navigation {
         display: flex;
         position: static;
         width: auto;
         background: none;
         padding: 0;
-        margin-left: 500px;
+        position: absolute;
+        top: 4%;
+        left: 63%;
     }
 
     .navigation a {
+        color: cyan;
         font-size: 25px;
     }
 
@@ -94,6 +83,7 @@
     .weather, .forecast {
         width: 30%;
         max-height: 250px;
+        overflow-y: auto;
     }
 
     .cards {
