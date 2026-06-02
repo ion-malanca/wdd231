@@ -37,7 +37,7 @@
     </header>
     <main>
         <section class="application-form">
-        <h2>Membership Application</h2>
+        <h1>Membership Application</h1>
         <form method="get" action="thankyou.html">
             <label>
                 First Name
@@ -96,32 +96,31 @@
     <section class="membership-cards">
         <div class="membership-card">
             <h3>NP Membership</h3>
-            <a href="#" onclick="document.getElementById('npModal').showModal()">Learn More</a>
+            <a href="#" class="modal-link" data-modal="npModal">Learn More</a>
         </div>
 
         <div class="membership-card">
             <h3>Bronze Membership</h3>
-            <a href="#" onclick="document.getElementById('bronzeModal').showModal()">Learn More</a>
+            <a href="#" class="modal-link" data-modal="bronzeModal">Learn More</a>
         </div>
 
         <div class="membership-card">
             <h3>Silver Membership</h3>
-            <a href="#" onclick="document.getElementById('silverModal').showModal()">Learn More</a>
+            <a href="#" class="modal-link" data-modal="silverModal">Learn More</a>
         </div>
 
         <div class="membership-card">
             <h3>Gold Membership</h3>
-            <a href="#" onclick="document.getElementById('goldModal').showModal()">Learn More</a>
+            <a href="#" class="modal-link" data-modal="goldModal">Learn More</a>
         </div>
-
     </section>
-    </main>
 
+    <!-- Update dialog buttons to remove inline onclick -->
     <dialog id="npModal">
         <h3>NP Membership</h3>
         <p>No annual fee.</p>
         <p>Access to chamber networking opportunities.</p>
-        <button onclick="document.getElementById('npModal').close()">Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="bronzeModal">
@@ -129,7 +128,7 @@
         <p>Directory listing.</p>
         <p>Networking events.</p>
         <p>Business promotion opportunities.</p>
-        <button onclick="document.getElementById('bronzeModal').close()">Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="silverModal">
@@ -137,7 +136,7 @@
         <p>All Bronze benefits.</p>
         <p>Event discounts.</p>
         <p>Training workshops.</p>
-        <button onclick="document.getElementById('silverModal').close()">Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="goldModal">
@@ -145,7 +144,7 @@
         <p>All Silver benefits.</p>
         <p>Homepage spotlight advertising.</p>
         <p>Premium sponsorship opportunities.</p>
-        <button onclick="document.getElementById('goldModal').close()">Close</button>
+        <button class="close-modal">Close</button>
     </dialog>
     
     <footer>

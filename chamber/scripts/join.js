@@ -27,3 +27,43 @@ const observer = new IntersectionObserver((entries) => {
 cards.forEach(card => {
     observer.observe(card);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modalLinks = document.querySelectorAll('.modal-link');
+
+    modalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalId = link.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+            }
+        });
+    });
+    
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('dialog');
+            if (modal) {
+                modal.close();
+            }
+        });
+    });
+    
+    const modals = document.querySelectorAll('dialog');
+    modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.close();
+            }
+        });
+    });
+});
+
+const timestampInput = document.getElementById('timestamp');
+if (timestampInput) {
+    timestampInput.value = new Date().toISOString();
+}
