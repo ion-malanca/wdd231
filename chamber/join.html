@@ -13,11 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.png">
-    <meta property="og:title" content="Capitol Commerce Moldova" />
-    <meta property="og:description" content="Directory and resources for businesses in Moldova. Join, discover, and connect with local commerce." />
+    <meta property="og:title" content="Capitol Commerce Moldova">
+    <meta property="og:description" content="Directory and resources for businesses in Moldova. Join, discover, and connect with local commerce.">
     <meta property="og:image" content="https://ion-malanca.github.io/wdd231/images/logo-icon.png">
-    <meta property="og:url" content="https://ion-malanca.github.io/wdd231/" />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ion-malanca.github.io/wdd231/">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <header>
@@ -37,116 +37,113 @@
     </header>
     <main>
         <section class="application-form">
-        <h1>Membership Application</h1>
-        <form method="get" action="thankyou.html">
-            <label>
-                First Name
-                <input type="text" name="firstname" title="Applicant First Name" autocomplete="given-name" required>
-            </label>
+            <h1>Membership Application</h1>
+            <form method="get" action="thankyou.html">
+                <label>
+                    First Name
+                    <input type="text" name="firstname" title="Applicant First Name" autocomplete="given-name" required>
+                </label>
 
-            <label>
-                Last Name
-                <input type="text" name="lastname" title="Applicant Last Name" autocomplete="family-name" required>
-            </label>
+                <label>
+                    Last Name
+                    <input type="text" name="lastname" title="Applicant Last Name" autocomplete="family-name" required>
+                </label>
 
-            <label>
-                Organizational Title
-                <input type="text" name="orgtitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
-            </label>
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgtitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                </label>
 
-            <label>
-                Email Address
-                <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
-            </label>
+                <label>
+                    Email Address
+                    <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
+                </label>
 
-            <label>
-                Mobile Phone
-                <input type="tel" name="phone" title="Mobile Phone Number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{7,15}" required>
-            </label>
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" title="Mobile Phone Number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{7,15}" required>
+                </label>
 
-            <label>
-                Business / Organization Name
-                <input type="text" name="organization" title="Business Name" autocomplete="organization" required>
-            </label>
+                <label>
+                    Business / Organization Name
+                    <input type="text" name="organization" title="Business Name" autocomplete="organization" required>
+                </label>
 
-            <label>
-                Membership Level
-                <select name="membership" required>
-                    <option value="">Select Membership</option>
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-            </label>
+                <label>
+                    Membership Level
+                    <select name="membership" required>
+                        <option value="">Select Membership</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
 
-            <label>
-                Business Description
-                <textarea
-                    name="description"
-                    title="Business Description"
-                    rows="5"></textarea>
-            </label>
+                <label>
+                    Business Description
+                    <textarea name="description" title="Business Description" rows="5"></textarea>
+                </label>
 
-            <input type="hidden" id="timestamp" name="timestamp">
-            <input type="submit" value="Apply for Membership">
-        </form>
-    </section>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <input type="submit" value="Apply for Membership">
+            </form>
+        </section>
 
-    <section class="membership-cards">
-        <div class="membership-card">
+        <section class="membership-cards">
+            <div class="membership-card">
+                <h3>NP Membership</h3>
+                <a href="#" class="modal-link" data-modal="npModal">Learn More</a>
+            </div>
+
+            <div class="membership-card">
+                <h3>Bronze Membership</h3>
+                <a href="#" class="modal-link" data-modal="bronzeModal">Learn More</a>
+            </div>
+
+            <div class="membership-card">
+                <h3>Silver Membership</h3>
+                <a href="#" class="modal-link" data-modal="silverModal">Learn More</a>
+            </div>
+
+            <div class="membership-card">
+                <h3>Gold Membership</h3>
+                <a href="#" class="modal-link" data-modal="goldModal">Learn More</a>
+            </div>
+        </section>
+
+        <dialog id="npModal">
             <h3>NP Membership</h3>
-            <a href="#" class="modal-link" data-modal="npModal">Learn More</a>
-        </div>
+            <p>No annual fee.</p>
+            <p>Access to chamber networking opportunities.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
 
-        <div class="membership-card">
+        <dialog id="bronzeModal">
             <h3>Bronze Membership</h3>
-            <a href="#" class="modal-link" data-modal="bronzeModal">Learn More</a>
-        </div>
+            <p>Directory listing.</p>
+            <p>Networking events.</p>
+            <p>Business promotion opportunities.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
 
-        <div class="membership-card">
+        <dialog id="silverModal">
             <h3>Silver Membership</h3>
-            <a href="#" class="modal-link" data-modal="silverModal">Learn More</a>
-        </div>
+            <p>All Bronze benefits.</p>
+            <p>Event discounts.</p>
+            <p>Training workshops.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
 
-        <div class="membership-card">
+        <dialog id="goldModal">
             <h3>Gold Membership</h3>
-            <a href="#" class="modal-link" data-modal="goldModal">Learn More</a>
-        </div>
-    </section>
+            <p>All Silver benefits.</p>
+            <p>Homepage spotlight advertising.</p>
+            <p>Premium sponsorship opportunities.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+    </main>
 
-    <!-- Update dialog buttons to remove inline onclick -->
-    <dialog id="npModal">
-        <h3>NP Membership</h3>
-        <p>No annual fee.</p>
-        <p>Access to chamber networking opportunities.</p>
-        <button class="close-modal">Close</button>
-    </dialog>
-
-    <dialog id="bronzeModal">
-        <h3>Bronze Membership</h3>
-        <p>Directory listing.</p>
-        <p>Networking events.</p>
-        <p>Business promotion opportunities.</p>
-        <button class="close-modal">Close</button>
-    </dialog>
-
-    <dialog id="silverModal">
-        <h3>Silver Membership</h3>
-        <p>All Bronze benefits.</p>
-        <p>Event discounts.</p>
-        <p>Training workshops.</p>
-        <button class="close-modal">Close</button>
-    </dialog>
-
-    <dialog id="goldModal">
-        <h3>Gold Membership</h3>
-        <p>All Silver benefits.</p>
-        <p>Homepage spotlight advertising.</p>
-        <p>Premium sponsorship opportunities.</p>
-        <button class="close-modal">Close</button>
-    </dialog>
-    
     <footer>
         <div class="unu">
             <p class="prima">Capitol Commerce Moldova</p>
