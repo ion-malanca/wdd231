@@ -6,44 +6,54 @@
     header {
         display: flex;
         align-items: center;
-        height: 110px;
+        justify-content: space-between;
+        padding: 10px 20px;
+        flex-wrap: nowrap;
     }
 
-    header nav {
+    .logo {
+        flex-shrink: 0;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .hamburger {
+        display: none !important;
+    }
+
+    nav {
+        width: auto;
+        order: 2;
+    }
+
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
         margin-top: 0;
+        gap: 25px;
     }
 
-    header img {
-        height: 80px;
+    .navigation li {
+        border-bottom: none;
     }
 
-    header h2{
-        font-size: 30px;
-        margin-left: 18px;
+    .navigation a {
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .navigation a:hover {
+        background-color: transparent;
+        color: rgba(206, 17, 96);
     }
 
     main h1 {
         margin-left: 20px;
-    }
-
-    .navigation {
-        display: flex;
-        position: static;
-        width: auto;
-        background: none;
-        padding: 0;
-        position: absolute;
-        top: 4%;
-        left: 63%;
-    }
-
-    .navigation a {
-        color: cyan;
-        font-size: 25px;
-    }
-
-    .hamburger {
-        display: none;
     }
 
     .hero img {

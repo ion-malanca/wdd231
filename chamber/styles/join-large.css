@@ -52,27 +52,50 @@
         color: rgba(206, 17, 96);
     }
 
-    .cards {
+    main h2 {
+        font-size: xx-large;
+        margin-top: 20px;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    input[type="submit"] {
+        font-size: large;
+    }
+
+    .membership-cards {
+        width: 80%;
+        margin: 2rem auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
-    .card {
-        text-align: left;
+    dialog {
+        width: 50%;
+        font-size: large;
     }
 
-    .list-view {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .list-info p {
-        font-size: 20px;
+    dialog button {
+        font-size: large;
     }
 
     footer {
-        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 20px;
+        text-align: left;
     }
+
+    footer div {
+        text-align: left;
+        flex: 1;
+        margin-left: 40px;
+    }
+
 }
