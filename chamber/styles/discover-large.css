@@ -1,0 +1,92 @@
+@media (min-width: 1025px) {
+    body {
+        max-width: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .hamburger {
+        display: none !important;
+    }
+
+    nav {
+        width: auto;
+        order: 2;
+    }
+
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        margin-top: 0;
+        gap: 25px;
+    }
+
+    .navigation li {
+        border-bottom: none;
+    }
+
+    .navigation a {
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .navigation a:hover {
+        background-color: transparent;
+        color: rgba(206, 17, 96);
+    }
+
+    main h1 {
+        font-size: xx-large;
+        margin-top: 20px;
+    }
+
+    .discover-grid {
+
+        grid-template-columns:
+            1fr 1fr 1fr;
+
+        grid-template-areas:
+            "one one two"
+            "three four two"
+            "five six seven"
+            "five eight eight";
+    }
+
+    .card img:hover {
+        transform: scale(1.08);
+        filter: brightness(1.15);
+        box-shadow: 0 0 15px rgba(0,0,0,.3);
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 20px;
+        text-align: left;
+    }
+
+    footer div {
+        text-align: left;
+        flex: 1;
+        margin-left: 40px;
+    }
+}
