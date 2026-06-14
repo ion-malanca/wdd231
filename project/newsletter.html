@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the ApexGrid newsletter for exclusive F1 content, driver interviews, and race previews delivered to your inbox">
+    <meta name="author" content="Ion Malanca">
+    
+    <!-- Open Graph / Social Media Metadata -->
+    <meta property="og:title" content="Join ApexGrid Newsletter | Formula 1 Updates">
+    <meta property="og:description" content="Subscribe to get the latest F1 news, driver stats, and race previews">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-newsletter.jpg">
+    
+    <title>ApexGrid | Join Our Newsletter - F1 Updates</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Additional form-specific styles */
+        .form-container {
+            background: rgba(0,0,0,0.85);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            border: 2px solid red;
+            animation: fadeIn 0.5s ease;
+            margin: 2rem auto;
+        }
+        
+        .form-container h1 {
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+        }
+        
+        .form-container p {
+            color: #ccc;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            color: #333;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: red;
+            box-shadow: 0 0 5px rgba(255,0,0,0.3);
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-weight: normal;
+        }
+        
+        .radio-group input {
+            width: auto;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #cc0000;
+            transform: scale(1.02);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            .form-container h1 {
+                font-size: 1.8rem;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+        
+        /* Desktop specific overrides */
+        @media (min-width: 601px) {
+            .form-container {
+                margin: 3rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ApexGrid Website Logo" width="90" height="90">
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+        <nav>
+            <ul class="navigation" id="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="drivers.html">DRIVERS</a></li>
+                <li><a href="teams.html">TEAMS</a></li>
+                <li><a href="newsletter.html" class="active">NEWSLETTER</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="form-container">
+            <h1>📧 Join Our Newsletter</h1>
+            <p>Get the latest F1 news, driver updates, and race previews delivered to your inbox!</p>
+            
+            <form id="newsletterForm" action="thank-you.html" method="GET">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="preference">Content Preference *</label>
+                    <select id="preference" name="preference" required>
+                        <option value="">Select your preference</option>
+                        <option value="drivers">🏎️ Driver News & Interviews</option>
+                        <option value="teams">🏭 Team Updates & Constructors</option>
+                        <option value="races">🏁 Race Previews & Results</option>
+                        <option value="all">📰 All F1 Content</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>How did you hear about us? *</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="source" value="social" required> Social Media
+                        </label>
+                        <label>
+                            <input type="radio" name="source" value="friend"> Friend/Family
+                        </label>
+                        <label>
+                            <input type="radio" name="source" value="search"> Search Engine
+                        </label>
+                        <label>
+                            <input type="radio" name="source" value="other"> Other
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Anything else you'd like to share? (Optional)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Tell us what you'd like to see in our newsletter..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">🚀 Subscribe Now</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>©<span id="currentYear"></span> | Ion Malanca | ApexGrid</p>
+        <p><a href="#" id="attributionLink">📋 Attributions</a></p>
+    </footer>
+    
+    <!-- Attribution Modal -->
+    <dialog id="attributionModal" class="modal modal-small">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close">✕</button>
+            <h2>📚 Attributions</h2>
+            <div class="attributions-list">
+                <p><strong>Images:</strong></p>
+                <ul>
+                    <li>Formula 1 official media - Driver images</li>
+                    <li>Background images from original project assets</li>
+                    <li>Team logos and car images from F1 media</li>
+                </ul>
+                <p><strong>Data:</strong></p>
+                <ul>
+                    <li>Driver statistics from 2026 F1 season data</li>
+                    <li>Team information compiled from official sources</li>
+                </ul>
+                <p><strong>Fonts:</strong></p>
+                <ul>
+                    <li>Bebas Neue from Google Fonts</li>
+                    <li>Roboto from Google Fonts</li>
+                </ul>
+                <p><strong>Icons:</strong></p>
+                <ul>
+                    <li>Emoji icons for visual enhancement</li>
+                </ul>
+            </div>
+        </div>
+    </dialog>
+    
+    <script src="scripts/index.js" type="module"></script>
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Store form data in localStorage before submitting
+        const form = document.getElementById('newsletterForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                const subscriptionData = {
+                    name: document.getElementById('name')?.value || '',
+                    email: document.getElementById('email')?.value || '',
+                    preference: document.getElementById('preference')?.value || '',
+                    source: document.querySelector('input[name="source"]:checked')?.value || 'Not specified',
+                    message: document.getElementById('message')?.value || '',
+                    date: new Date().toISOString()
+                };
+                localStorage.setItem('lastSubscription', JSON.stringify(subscriptionData));
+                console.log('Subscription saved:', subscriptionData);
+            });
+        }
+    </script>
+</body>
+</html>
