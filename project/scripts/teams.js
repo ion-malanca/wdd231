@@ -1,16 +1,10 @@
-// ============ TEAMS.JS - COMPLETE WORKING VERSION ============
-console.log('teams.js loaded');
-
-// Set current year
 const yearSpan = document.getElementById('currentYear');
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
 
-// Global variables
 let allTeams = [];
 
-// ============ HAMBURGER MENU ============
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
@@ -29,7 +23,6 @@ if (hamburger && navMenu) {
     });
 }
 
-// ============ FETCH DATA FROM JSON ============
 async function loadTeams() {
     const container = document.getElementById('teams-container');
     if (!container) {
@@ -40,7 +33,6 @@ async function loadTeams() {
     container.innerHTML = '<div class="loading-spinner">🏭 Loading teams...</div>';
     
     try {
-        // Fetch from your JSON file
         const response = await fetch('./data/f1-data.json');
         
         if (!response.ok) {
@@ -56,11 +48,9 @@ async function loadTeams() {
             container.innerHTML = '<div class="error-message">No teams found in JSON file</div>';
             return;
         }
-        
-        // Populate engine filter
+
         populateEngineFilter(allTeams);
-        
-        // Display teams
+
         displayTeams(allTeams);
         
     } catch (error) {
@@ -74,18 +64,14 @@ async function loadTeams() {
     }
 }
 
-// ============ POPULATE ENGINE FILTER ============
 function populateEngineFilter(teams) {
     const engineFilter = document.getElementById('engineFilter');
     if (!engineFilter) return;
-    
-    // Get unique engines using Set
+
     const uniqueEngines = [...new Set(teams.map(team => team.engine))];
-    
-    // Sort alphabetically
+
     uniqueEngines.sort();
-    
-    // Add to dropdown
+
     uniqueEngines.forEach(engine => {
         const option = document.createElement('option');
         option.value = engine;
@@ -96,7 +82,6 @@ function populateEngineFilter(teams) {
     console.log(`Added ${uniqueEngines.length} engines to filter`);
 }
 
-// ============ DISPLAY TEAMS ============
 function displayTeams(teams) {
     const container = document.getElementById('teams-container');
     
@@ -104,11 +89,9 @@ function displayTeams(teams) {
         container.innerHTML = '<div class="no-results">🔍 No teams found matching your criteria</div>';
         return;
     }
-    
-    // Get favorites from localStorage
+
     let favorites = JSON.parse(localStorage.getItem('favoriteTeams')) || [];
-    
-    // Using map array method to generate HTML
+
     const teamsHTML = teams.map(team => {
         const isFav = favorites.includes(team.name);
         const driversList = team.drivers.join(', ');
@@ -139,8 +122,6 @@ function displayTeams(teams) {
     
     container.innerHTML = teamsHTML;
     console.log(`Displayed ${teams.length} teams`);
-    
-    // Add event listeners to favorite buttons
     document.querySelectorAll('.favorite-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -148,8 +129,7 @@ function displayTeams(teams) {
             addToFavorites(teamName, btn);
         });
     });
-    
-    // Add event listeners to detail buttons
+
     document.querySelectorAll('.details-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const team = JSON.parse(btn.dataset.team);
@@ -158,7 +138,6 @@ function displayTeams(teams) {
     });
 }
 
-// ============ ADD TO FAVORITES (LocalStorage) ============
 function addToFavorites(teamName, button) {
     let favorites = JSON.parse(localStorage.getItem('favoriteTeams')) || [];
     
@@ -174,7 +153,6 @@ function addToFavorites(teamName, button) {
     }
 }
 
-// ============ SHOW TEAM DETAILS IN MODAL ============
 function showTeamDetails(team) {
     const modal = document.getElementById('teamModal');
     const modalContent = document.getElementById('modalContent');
@@ -201,25 +179,21 @@ function showTeamDetails(team) {
     `;
     
     modal.showModal();
-    
-    // Close button functionality
+
     const closeBtn = modal.querySelector('.close-modal');
     if (closeBtn) {
         closeBtn.onclick = () => modal.close();
     }
-    
-    // Close on backdrop click
+
     modal.onclick = (e) => {
         if (e.target === modal) modal.close();
     };
 }
 
-// ============ APPLY FILTERS ============
 function applyFilters() {
     const searchValue = document.getElementById('search')?.value.toLowerCase() || '';
     const selectedEngine = document.getElementById('engineFilter')?.value || 'all';
-    
-    // Using filter array method
+
     let filtered = [...allTeams];
     
     if (selectedEngine !== 'all') {
@@ -237,7 +211,6 @@ function applyFilters() {
     displayTeams(filtered);
 }
 
-// ============ TOAST MESSAGE ============
 function showToast(message, color = '#00ff00') {
     const toast = document.createElement('div');
     toast.textContent = message;
@@ -259,28 +232,7 @@ function showToast(message, color = '#00ff00') {
     setTimeout(() => toast.remove(), 2000);
 }
 
-// ============ MODAL SETUP ============
 function setupModals() {
-    // Newsletter modal
-    const newsletterLink = document.getElementById('newsletterLink');
-    const newsletterModal = document.getElementById('newsletterModal');
-    
-    if (newsletterLink && newsletterModal) {
-        newsletterLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            newsletterModal.showModal();
-        });
-        
-        const closeNewsletterBtn = newsletterModal.querySelector('.close-modal');
-        if (closeNewsletterBtn) {
-            closeNewsletterBtn.onclick = () => newsletterModal.close();
-        }
-        newsletterModal.onclick = (e) => {
-            if (e.target === newsletterModal) newsletterModal.close();
-        };
-    }
-    
-    // Attribution modal
     const attributionLink = document.getElementById('attributionLink');
     const attributionModal = document.getElementById('attributionModal');
     
@@ -298,28 +250,8 @@ function setupModals() {
             if (e.target === attributionModal) attributionModal.close();
         };
     }
-    
-    // Newsletter form submission
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            const name = document.getElementById('name')?.value || '';
-            const email = document.getElementById('email')?.value || '';
-            const preference = document.getElementById('preference')?.value || '';
-            
-            const userPref = {
-                name: name,
-                email: email,
-                preference: preference,
-                subscribedDate: new Date().toISOString()
-            };
-            localStorage.setItem('userPreferences', JSON.stringify(userPref));
-            console.log('Newsletter subscription saved for:', name);
-        });
-    }
 }
 
-// ============ EVENT LISTENERS ============
 const searchInput = document.getElementById('search');
 const engineFilter = document.getElementById('engineFilter');
 
@@ -330,7 +262,6 @@ if (engineFilter) {
     engineFilter.addEventListener('change', applyFilters);
 }
 
-// ============ ADD CSS ANIMATION ============
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeOut {
@@ -341,7 +272,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ============ INITIALIZE ============
 function init() {
     setupModals();
     loadTeams();

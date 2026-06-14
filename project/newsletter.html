@@ -5,26 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join the ApexGrid newsletter for exclusive F1 content, driver interviews, and race previews delivered to your inbox">
     <meta name="author" content="Ion Malanca">
-    
-    <!-- Open Graph / Social Media Metadata -->
-    <meta property="og:title" content="Join ApexGrid Newsletter | Formula 1 Updates">
-    <meta property="og:description" content="Subscribe to get the latest F1 news, driver stats, and race previews">
+    <meta property="og:title" content="ApexGrid | Formula 1 Hub - Drivers, Teams & Stats">
+    <meta property="og:description" content="Your ultimate destination for F1 driver statistics, team performance, and race coverage">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-newsletter.jpg">
-    
+    <meta property="og:url" content="https://ion-malanca.github.io/wdd231/project/">
     <title>ApexGrid | Join Our Newsletter - F1 Updates</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- CSS Files -->
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/index-large.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Additional form-specific styles */
         .form-container {
             background: rgba(0,0,0,0.85);
             border-radius: 20px;
@@ -145,7 +138,6 @@
             }
         }
         
-        /* Desktop specific overrides */
         @media (min-width: 601px) {
             .form-container {
                 margin: 3rem auto;
@@ -229,42 +221,9 @@
         <p><a href="#" id="attributionLink">📋 Attributions</a></p>
     </footer>
     
-    <!-- Attribution Modal -->
-    <dialog id="attributionModal" class="modal modal-small">
-        <div class="modal-content">
-            <button class="close-modal" aria-label="Close">✕</button>
-            <h2>📚 Attributions</h2>
-            <div class="attributions-list">
-                <p><strong>Images:</strong></p>
-                <ul>
-                    <li>Formula 1 official media - Driver images</li>
-                    <li>Background images from original project assets</li>
-                    <li>Team logos and car images from F1 media</li>
-                </ul>
-                <p><strong>Data:</strong></p>
-                <ul>
-                    <li>Driver statistics from 2026 F1 season data</li>
-                    <li>Team information compiled from official sources</li>
-                </ul>
-                <p><strong>Fonts:</strong></p>
-                <ul>
-                    <li>Bebas Neue from Google Fonts</li>
-                    <li>Roboto from Google Fonts</li>
-                </ul>
-                <p><strong>Icons:</strong></p>
-                <ul>
-                    <li>Emoji icons for visual enhancement</li>
-                </ul>
-            </div>
-        </div>
-    </dialog>
-    
     <script src="scripts/index.js" type="module"></script>
     <script>
-        // Set current year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Store form data in localStorage before submitting
         const form = document.getElementById('newsletterForm');
         if (form) {
             form.addEventListener('submit', function(e) {
