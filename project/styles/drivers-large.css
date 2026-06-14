@@ -12,7 +12,6 @@
         overflow-x: hidden;
     }
 
-    /* Header Desktop */
     header {
         display: flex;
         flex-direction: row;
@@ -37,7 +36,6 @@
         display: none;
     }
 
-    /* Navigation Desktop */
     nav {
         flex: 1;
         display: flex;
@@ -87,7 +85,6 @@
         color: #ffd700;
     }
 
-    /* Main Content Desktop */
     main {
         max-width: 1400px;
         margin: 0 auto;
@@ -102,7 +99,6 @@
         margin-bottom: 1rem;
     }
 
-    /* Controls Desktop */
     .controls {
         flex-direction: row;
         justify-content: flex-end;
@@ -120,7 +116,6 @@
         max-width: none;
     }
 
-    /* Drivers Grid Desktop */
     #drivers-container {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         gap: 25px;
@@ -152,12 +147,10 @@
         width: 100%;
     }
 
-    /* Modal Desktop */
     .modal {
         max-width: 500px;
     }
 
-    /* Footer Desktop */
     footer {
         flex-direction: row;
         justify-content: space-between;
@@ -167,7 +160,6 @@
     }
 }
 
-/* Medium Desktop (601px - 800px) */
 @media (min-width: 601px) and (max-width: 800px) {
     .navigation {
         gap: 0.3rem;
@@ -196,7 +188,6 @@
     }
 }
 
-/* Desktop (801px - 1000px) */
 @media (min-width: 801px) and (max-width: 1000px) {
     .navigation {
         gap: 0.8rem;
@@ -220,7 +211,6 @@
     }
 }
 
-/* Large Desktop (1001px - 1200px) */
 @media (min-width: 1001px) and (max-width: 1200px) {
     .navigation {
         gap: 1rem;
@@ -240,7 +230,6 @@
     }
 }
 
-/* Extra Large Desktop (1200px+) */
 @media (min-width: 1200px) {
     .navigation {
         gap: 1.5rem;
@@ -257,18 +246,6 @@
     
     #drivers-container {
         grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
 

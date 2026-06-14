@@ -1,32 +1,23 @@
-// ============ INDEX.JS - COMPLETE WORKING VERSION ============
-console.log('Index.js loaded successfully');
-
-// ============ SET CURRENT YEAR ============
 const yearSpan = document.getElementById('currentYear');
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
-    console.log('Year set to:', new Date().getFullYear());
 }
 
-// ============ MODAL MANAGER CLASS ============
 class ModalManager {
     constructor(modalElement) {
         this.modal = modalElement;
         this.setupEventListeners();
     }
-    
     setupEventListeners() {
         const closeBtn = this.modal?.querySelector('.close-modal');
         if (closeBtn) {
             closeBtn.addEventListener('click', () => this.close());
         }
-        
         this.modal?.addEventListener('click', (e) => {
             if (e.target === this.modal) {
                 this.close();
             }
         });
-        
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.modal?.open) {
                 this.close();
@@ -47,7 +38,6 @@ class ModalManager {
     }
 }
 
-// ============ MODAL SETUP ============
 const attributionModal = document.getElementById('attributionModal');
 let attributionModalManager = null;
 
@@ -58,7 +48,6 @@ if (attributionModal) {
     console.log('Attribution modal not found');
 }
 
-// ============ HAMBURGER MENU ============
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
@@ -68,8 +57,7 @@ if (hamburger && navMenu) {
         hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
         console.log('Menu toggled');
     });
-    
-    // Close menu when clicking a link
+
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -77,11 +65,8 @@ if (hamburger && navMenu) {
             hamburger.textContent = '☰';
         });
     });
-} else {
-    console.log('Hamburger or navMenu not found');
 }
 
-// ============ SET ACTIVE NAV LINK ============
 function setActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.navigation a');
@@ -90,12 +75,10 @@ function setActiveNavLink() {
         const href = link.getAttribute('href');
         if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
             link.classList.add('active');
-            console.log('Active nav link set to:', href);
         }
     });
 }
 
-// ============ ATTRIBUTION MODAL HANDLER ============
 const attributionLink = document.getElementById('attributionLink');
 if (attributionLink && attributionModalManager) {
     attributionLink.addEventListener('click', (e) => {
@@ -107,7 +90,6 @@ if (attributionLink && attributionModalManager) {
     console.log('Attribution link or modal manager not found');
 }
 
-// ============ SCROLL ANIMATIONS ============
 function addScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
@@ -134,7 +116,6 @@ function addScrollAnimations() {
     console.log('Scroll animations added for', animatedElements.length, 'elements');
 }
 
-// ============ INITIALIZE PAGE ============
 function init() {
     console.log('Initializing page...');
     setActiveNavLink();
@@ -142,5 +123,4 @@ function init() {
     console.log('Page initialization complete');
 }
 
-// Run when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);

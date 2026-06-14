@@ -18,7 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-/* For screens larger than 400px, center the content */
 @media (min-width: 401px) {
     body {
         margin: 0 auto;
@@ -26,7 +25,6 @@ body {
     }
 }
 
-/* Header Styles */
 header img {
     height: 60px;
     width: auto;
@@ -45,7 +43,6 @@ header {
     position: relative;
 }
 
-/* Hamburger Button for Mobile */
 .hamburger {
     display: flex;
     font-size: 2rem;
@@ -63,7 +60,6 @@ header {
     z-index: 1001;
 }
 
-/* Mobile Navigation Menu */
 .navigation {
     list-style: none;
     display: none;
@@ -107,7 +103,6 @@ header {
     color: white;
 }
 
-/* Main Content */
 main h1 {
     display: flex;
     font-size: 40px;
@@ -121,7 +116,6 @@ main h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Controls */
 .controls {
     display: flex;
     flex-direction: column;
@@ -154,7 +148,6 @@ main h1 {
     background: white;
 }
 
-/* Teams Container */
 #teams-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -254,7 +247,6 @@ main h1 {
     color: black;
 }
 
-/* Loading State */
 .loading-spinner {
     text-align: center;
     padding: 3rem;
@@ -262,7 +254,6 @@ main h1 {
     font-size: 1.2rem;
 }
 
-/* Error Message */
 .error-message {
     text-align: center;
     padding: 2rem;
@@ -279,7 +270,6 @@ main h1 {
     font-size: 1.2rem;
 }
 
-/* Modal Styles */
 .modal {
     border: none;
     border-radius: 15px;
@@ -367,7 +357,6 @@ main h1 {
     margin: 3px 0;
 }
 
-/* Footer */
 footer {
     width: 100%;
     display: flex;

@@ -1,25 +1,15 @@
-// ============ STANDALONE DRIVERS.JS - NO IMPORTS NEEDED ============
-
-
-// Configuration
 const STORAGE_KEYS = {
     FAVORITE_DRIVERS: 'favoriteDrivers',
     USER_PREFERENCES: 'userPreferences'
 };
 
-// Global variables
 let allDrivers = [];
 
-// ============ INITIALIZATION ============
-console.log('Drivers.js loaded successfully');
-
-// Set current year
 const yearSpan = document.getElementById('currentYear');
 if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
 }
 
-// ============ HAMBURGER MENU ============
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
@@ -38,7 +28,6 @@ if (hamburger && navMenu) {
     });
 }
 
-// ============ FETCH DATA ============
 async function fetchF1Data() {
     try {
         console.log('Fetching data from ../data/f1-data.json');
@@ -57,7 +46,6 @@ async function fetchF1Data() {
     }
 }
 
-// ============ LOCAL STORAGE ============
 function getFromLocalStorage(key) {
     try {
         const item = localStorage.getItem(key);
@@ -91,7 +79,6 @@ function addFavorite(driverName) {
     return false;
 }
 
-// ============ MODAL FUNCTIONS ============
 class ModalManager {
     constructor(modalElement) {
         this.modal = modalElement;
@@ -132,14 +119,12 @@ class ModalManager {
     }
 }
 
-// Initialize modals
 const driverModal = document.getElementById('driverModal');
 let driverModalManager = null;
 if (driverModal) {
     driverModalManager = new ModalManager(driverModal);
 }
 
-// ============ POPULATE TEAM FILTER ============
 function populateTeamFilter(drivers) {
     const teamFilter = document.getElementById('teamFilter');
     if (!teamFilter) return;
@@ -160,7 +145,6 @@ function populateTeamFilter(drivers) {
     console.log(`Added ${uniqueTeams.length} teams to filter`);
 }
 
-// ============ DISPLAY DRIVERS ============
 function displayDrivers(drivers, favorites = []) {
     const container = document.getElementById('drivers-container');
     
@@ -198,7 +182,6 @@ function displayDrivers(drivers, favorites = []) {
     
     container.innerHTML = driversHTML;
     
-    // Favorite buttons
     document.querySelectorAll('.favorite-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -215,7 +198,6 @@ function displayDrivers(drivers, favorites = []) {
         });
     });
     
-    // Detail buttons
     document.querySelectorAll('.details-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const driver = JSON.parse(btn.dataset.driver);
@@ -224,7 +206,6 @@ function displayDrivers(drivers, favorites = []) {
     });
 }
 
-// ============ SHOW DRIVER DETAILS ============
 function showDriverDetails(driver) {
     if (!driverModalManager) return;
     
@@ -248,7 +229,6 @@ function showDriverDetails(driver) {
     driverModalManager.open(modalContent);
 }
 
-// ============ APPLY FILTERS ============
 function applyFilters() {
     const searchValue = document.getElementById('search')?.value.toLowerCase() || '';
     const selectedTeam = document.getElementById('teamFilter')?.value || 'all';
@@ -270,7 +250,6 @@ function applyFilters() {
     displayDrivers(filtered, favorites);
 }
 
-// ============ TOAST MESSAGE ============
 function showToast(message, color = '#00ff00') {
     const toast = document.createElement('div');
     toast.textContent = message;
@@ -291,7 +270,6 @@ function showToast(message, color = '#00ff00') {
     setTimeout(() => toast.remove(), 2000);
 }
 
-// ============ LOAD DRIVERS ============
 async function loadDrivers() {
     const container = document.getElementById('drivers-container');
     if (!container) return;
@@ -319,7 +297,6 @@ async function loadDrivers() {
     }
 }
 
-// ============ ADD CSS ANIMATION ============
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeOut {
@@ -330,12 +307,10 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ============ INITIALIZE ============
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded, initializing...');
     loadDrivers();
-    
-    // Set up filter event listeners
+
     const searchInput = document.getElementById('search');
     const teamFilter = document.getElementById('teamFilter');
     

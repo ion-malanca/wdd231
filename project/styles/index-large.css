@@ -12,7 +12,6 @@
         overflow-x: visible;
     }
 
-    /* Header Desktop */
     header {
         display: flex;
         flex-direction: row;
@@ -37,7 +36,6 @@
         display: none;
     }
 
-    /* Navigation Desktop */
     nav {
         flex: 1;
         display: flex;
@@ -87,7 +85,6 @@
         color: #ffd700;
     }
 
-    /* Main Content Desktop */
     main {
         max-width: 1400px;
         margin: 0 auto;
@@ -96,7 +93,6 @@
         overflow-x: hidden;
     }
 
-    /* Content Wrapper - Side by side layout */
     .content-wrapper {
         flex-direction: row;
         gap: 3rem;
@@ -113,7 +109,6 @@
         top: 100px;
     }
 
-    /* Hero Section */
     .hero-text {
         font-size: 22px;
         text-align: left;
@@ -123,7 +118,6 @@
         margin-left: 0;
     }
 
-    /* Information Section */
     .information {
         width: 100%;
         max-width: 100%;
@@ -141,7 +135,6 @@
         font-size: 17px;
     }
 
-    /* Race Highlight Section */
     .race-highlight {
         width: 100%;
         margin-left: 0;
@@ -160,7 +153,6 @@
         font-size: 1.2rem;
     }
 
-    /* Champion Section - Sidebar */
     .champion-section {
         margin: 2rem 0 0 0;
         width: 100%;
@@ -181,7 +173,6 @@
         font-size: 1.6rem;
     }
 
-    /* Footer Desktop */
     footer {
         flex-direction: row;
         justify-content: space-between;
@@ -194,7 +185,6 @@
         font-size: 15px;
     }
 
-    /* Modal Desktop */
     .modal {
         max-width: 500px;
     }
@@ -204,7 +194,6 @@
     }
 }
 
-/* Medium Desktop (601px - 800px) */
 @media (min-width: 601px) and (max-width: 800px) {
     .navigation {
         gap: 0.3rem;
@@ -232,7 +221,6 @@
     }
 }
 
-/* Desktop (801px - 1000px) */
 @media (min-width: 801px) and (max-width: 1000px) {
     .navigation {
         gap: 0.8rem;
@@ -252,7 +240,6 @@
     }
 }
 
-/* Large Desktop (1001px - 1200px) */
 @media (min-width: 1001px) and (max-width: 1200px) {
     .navigation {
         gap: 1rem;
@@ -272,7 +259,6 @@
     }
 }
 
-/* Extra Large Desktop (1200px+) */
 @media (min-width: 1200px) {
     .navigation {
         gap: 1.5rem;

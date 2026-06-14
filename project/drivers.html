@@ -5,25 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Complete 2026 F1 driver roster with statistics, nationalities, team affiliations, championship wins, and career podiums">
     <meta name="author" content="Ion Malanca">
-    
-    <!-- Open Graph / Social Media Metadata -->
-    <meta property="og:title" content="F1 Drivers 2026 | ApexGrid">
-    <meta property="og:description" content="View all Formula 1 drivers for the 2026 season with detailed statistics including wins, podiums, and championships">
+    <meta property="og:title" content="ApexGrid | Formula 1 Hub - Drivers, Teams & Stats">
+    <meta property="og:description" content="Your ultimate destination for F1 driver statistics, team performance, and race coverage">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-drivers.jpg">
-    
+    <meta property="og:url" content="https://ion-malanca.github.io/wdd231/project/">
     <title>ApexGrid | 2026 F1 Drivers - Full Roster & Career Stats</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- CSS Files -->
     <link rel="stylesheet" href="styles/drivers.css">
-    <link rel="stylesheet" href="styles/drivers-large.css">
-    
+    <link rel="stylesheet" href="styles/drivers-large.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- JavaScript ES Module -->
     <script type="module" src="scripts/drivers.js"></script>
 </head>
 <body>
@@ -62,7 +54,6 @@
         <p><a href="#" id="attributionLink">📋 Attributions</a></p>
     </footer>
     
-    <!-- Driver Detail Modal -->
     <dialog id="driverModal" class="modal">
         <div class="modal-content">
             <button class="close-modal" aria-label="Close">✕</button>
@@ -70,35 +61,6 @@
         </div>
     </dialog>
     
-    <!-- Newsletter Modal -->
-    <dialog id="newsletterModal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" aria-label="Close">✕</button>
-            <h2>📧 Subscribe to Newsletter</h2>
-            <form id="newsletterForm" action="thank-you.html" method="GET">
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="preference">Preferred Content:</label>
-                    <select id="preference" name="preference">
-                        <option value="drivers">🏎️ Driver News</option>
-                        <option value="teams">🏭 Team Updates</option>
-                        <option value="races">🏁 Race Coverage</option>
-                        <option value="all">📰 All Content</option>
-                    </select>
-                </div>
-                <button type="submit" class="submit-btn">Subscribe Now</button>
-            </form>
-        </div>
-    </dialog>
-    
-    <!-- Attribution Modal -->
     <dialog id="attributionModal" class="modal modal-small">
         <div class="modal-content">
             <button class="close-modal" aria-label="Close">✕</button>

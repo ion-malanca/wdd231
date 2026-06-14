@@ -18,7 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-/* For screens larger than 400px, center the content */
 @media (min-width: 401px) {
     body {
         margin: 0 auto;
@@ -26,7 +25,6 @@ body {
     }
 }
 
-/* Header Styles */
 header img {
     height: 60px;
     width: auto;
@@ -45,7 +43,6 @@ header {
     position: relative;
 }
 
-/* Hamburger Button for Mobile */
 .hamburger {
     display: flex;
     font-size: 2rem;
@@ -63,7 +60,6 @@ header {
     z-index: 1001;
 }
 
-/* Mobile Navigation Menu */
 .navigation {
     list-style: none;
     display: none;
@@ -107,7 +103,6 @@ header {
     color: white;
 }
 
-/* Main Content */
 main {
     padding-bottom: 2rem;
 }
@@ -117,7 +112,6 @@ main h1 {
     margin-top: 2rem;
 }
 
-/* Content Wrapper - Two column layout on desktop */
 .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -132,7 +126,6 @@ main h1 {
     flex: 0 0 auto;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     margin: 1rem 0;
@@ -147,7 +140,6 @@ main h1 {
     margin: 0 1rem;
 }
 
-/* Information Section */
 .information {
     margin: 2rem 1rem;
     width: auto;
@@ -182,7 +174,6 @@ main h1 {
     line-height: 1.4;
 }
 
-/* Race Highlight Section */
 .race-highlight {
     display: flex;
     flex-direction: column;
@@ -229,7 +220,6 @@ main h1 {
     transform: scale(1.05);
 }
 
-/* Champion Section Styles - Sidebar */
 .champion-section {
     margin: 1rem;
     padding: 1rem;
@@ -291,7 +281,6 @@ main h1 {
     border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Footer */
 footer {
     width: 100%;
     display: flex;
@@ -317,7 +306,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Modal Styles */
 .modal {
     border: none;
     border-radius: 10px;
@@ -393,18 +381,6 @@ footer a:hover {
 .attributions-list li {
     margin: 0.3rem 0;
     font-size: 0.85rem;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .information,
