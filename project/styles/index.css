@@ -6,7 +6,7 @@
 
 body {
     margin: 0 auto;
-    background-image: 
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/mobile-main-background.webp");
     background-size: cover;
@@ -81,6 +81,7 @@ header {
 
 .navigation li {
     width: 100%;
+    color: black;
 }
 
 .navigation a {
@@ -114,6 +115,7 @@ main h1 {
     color: white;
     font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
+    background-color: black;
 }
 
 .content-wrapper {
