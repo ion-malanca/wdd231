@@ -13,137 +13,11 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/index-large.css">
+    <link rel="stylesheet" href="styles/newsletter.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        .form-container {
-            background: rgba(0,0,0,0.85);
-            border-radius: 20px;
-            padding: 2rem;
-            max-width: 500px;
-            width: 100%;
-            border: 2px solid red;
-            animation: fadeIn 0.5s ease;
-            margin: 2rem auto;
-        }
-        
-        .form-container h1 {
-            color: #ffd700;
-            text-align: center;
-            margin-bottom: 0.5rem;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2.5rem;
-        }
-        
-        .form-container p {
-            color: #ccc;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            color: #ffd700;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-            color: #333;
-            box-sizing: border-box;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: red;
-            box-shadow: 0 0 5px rgba(255,0,0,0.3);
-        }
-        
-        .radio-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .radio-group label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            font-weight: normal;
-        }
-        
-        .radio-group input {
-            width: auto;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: red;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background: #cc0000;
-            transform: scale(1.02);
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .form-container {
-                padding: 1.5rem;
-                margin: 1rem;
-            }
-            
-            .form-container h1 {
-                font-size: 1.8rem;
-            }
-            
-            .radio-group {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-        
-        @media (min-width: 601px) {
-            .form-container {
-                margin: 3rem auto;
-            }
-        }
-    </style>
+    <script src="scripts/newsletter.js"></script>
 </head>
 <body>
     <header>
@@ -218,27 +92,6 @@
     
     <footer>
         <p>©<span id="currentYear"></span> | Ion Malanca | ApexGrid</p>
-        <p><a href="#" id="attributionLink">📋 Attributions</a></p>
     </footer>
-    
-    <script src="scripts/index.js" type="module"></script>
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        const form = document.getElementById('newsletterForm');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                const subscriptionData = {
-                    name: document.getElementById('name')?.value || '',
-                    email: document.getElementById('email')?.value || '',
-                    preference: document.getElementById('preference')?.value || '',
-                    source: document.querySelector('input[name="source"]:checked')?.value || 'Not specified',
-                    message: document.getElementById('message')?.value || '',
-                    date: new Date().toISOString()
-                };
-                localStorage.setItem('lastSubscription', JSON.stringify(subscriptionData));
-                console.log('Subscription saved:', subscriptionData);
-            });
-        }
-    </script>
 </body>
 </html>

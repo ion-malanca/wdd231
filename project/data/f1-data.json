@@ -94,7 +94,7 @@
     {
       "id": 8,
       "name": "Nico Hulkenberg",
-      "team": "Sauber",
+      "team": "Audi",
       "number": 27,
       "nationality": "Germany",
       "age": 37,
@@ -120,7 +120,7 @@
     {
       "id": 10,
       "name": "Sergio Perez",
-      "team": "Red Bull Racing",
+      "team": "Cadillac",
       "number": 11,
       "nationality": "Mexico",
       "age": 34,
@@ -237,7 +237,7 @@
     {
       "id": 19,
       "name": "Gabriel Bortoleto",
-      "team": "Sauber",
+      "team": "Audi",
       "number": 5,
       "nationality": "Brazil",
       "age": 20,
@@ -315,7 +315,7 @@
       "founded": 2005,
       "championships": 6,
       "wins": 121,
-      "drivers": ["Max Verstappen", "Sergio Perez", "Isack Hadjar"],
+      "drivers": ["Max Verstappen", "Isack Hadjar"],
       "image": "https://media.formula1.com/image/upload/c_lfill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp"
     },
     {
@@ -359,7 +359,7 @@
       "image": "https://media.formula1.com/image/upload/c_lfill,w_720/q_auto/v1740000001/common/f1/2026/williams/2026williamscarright.webp"
     },
     {
-      "name": "Haas",
+      "name": "HAAS",
       "engine": "Ferrari",
       "base": "USA",
       "founded": 2016,
@@ -379,7 +379,7 @@
       "image": "https://media.formula1.com/image/upload/c_lfill,w_720/q_auto/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp"
     },
     {
-      "name": "Sauber",
+      "name": "Audi",
       "engine": "Ferrari",
       "base": "Switzerland",
       "founded": 1993,
