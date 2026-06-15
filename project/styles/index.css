@@ -244,6 +244,7 @@ main h1 {
     font-size: 1.5rem;
     color: #ffd700;
     font-family: "Bebas Neue", sans-serif;
+    background-color: black;
 }
 
 .champion-card {
@@ -366,6 +367,7 @@ footer a:hover {
     margin-bottom: 1rem;
     text-align: center;
     color: #ffd700;
+    background-color: black;
 }
 
 .modal-small {
@@ -392,6 +394,7 @@ footer a:hover {
     margin: 0.3rem 0;
     font-size: 0.85rem;
     color: #e0e0e0;
+    background-color: black;
 }
 
 .information,
