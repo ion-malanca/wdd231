@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #f0f8ff;
 }
 
 body {
@@ -16,6 +15,7 @@ body {
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    color: #f0f8ff;
 }
 
 @media (min-width: 401px) {
@@ -46,7 +46,6 @@ header {
 .hamburger {
     display: flex;
     font-size: 2rem;
-    background: none;
     border: none;
     color: white;
     cursor: pointer;
@@ -184,6 +183,7 @@ main h1 {
 .team-card p {
     font-size: 14px;
     margin: 5px 0;
+    color: #f0f8ff;
 }
 
 .team-card .stats {
@@ -342,6 +342,7 @@ main h1 {
     margin: 8px 0;
     padding: 5px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #f0f8ff;
 }
 
 .detail-stats strong {
@@ -355,6 +356,7 @@ main h1 {
 
 .detail-stats li {
     margin: 3px 0;
+    color: #f0f8ff;
 }
 
 footer {
@@ -401,4 +403,5 @@ footer a {
 .attributions-list li {
     margin: 0.3rem 0;
     font-size: 0.85rem;
+    color: #ccc;
 }
