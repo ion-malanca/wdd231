@@ -39,10 +39,16 @@
         <h1>Formula 1 Teams 2026</h1>
         
         <section class="controls">
-            <input type="text" id="search" placeholder="🔍 Search team by name or base...">
-            <select id="engineFilter">
-                <option value="all">All Engines</option>
-            </select>
+            <div class="control-group">
+                <label for="search">Search Teams:</label>
+                <input type="text" id="search" placeholder="🔍 Search team by name or base...">
+            </div>
+            <div class="control-group">
+                <label for="engineFilter">Filter by Engine:</label>
+                <select id="engineFilter">
+                    <option value="all">All Engines</option>
+                </select>
+            </div>
         </section>
 
         <section id="teams-container">
@@ -65,23 +71,25 @@
     <dialog id="attributionModal" class="modal modal-small">
         <div class="modal-content">
             <button class="close-modal" aria-label="Close">✕</button>
-            <h2>📚 Attributions</h2>
-            <div class="attributions-list">
-                <p>Images:</p>
-                <ul>
-                    <li>Formula 1 official media - Team and car images</li>
-                    <li>Background images from original project assets</li>
-                </ul>
-                <p>Data:</p>
-                <ul>
-                    <li>Team statistics from 2026 F1 season data</li>
-                    <li>Constructor info compiled from official F1 records</li>
-                </ul>
-                <p>Fonts:</p>
-                <ul>
-                    <li>Bebas Neue from Google Fonts</li>
-                    <li>Roboto from Google Fonts</li>
-                </ul>
+            <div id="modalContent">
+                <h2>📚 Attributions</h2>
+                <div class="attributions-list">
+                    <p><strong>Images:</strong></p>
+                    <ul>
+                        <li>Formula 1 official media - Team and car images</li>
+                        <li>Background images from original project assets</li>
+                    </ul>
+                    <p><strong>Data:</strong></p>
+                    <ul>
+                        <li>Team statistics from 2026 F1 season data</li>
+                        <li>Constructor info compiled from official F1 records</li>
+                    </ul>
+                    <p><strong>Fonts:</strong></p>
+                    <ul>
+                        <li>Bebas Neue from Google Fonts</li>
+                        <li>Roboto from Google Fonts</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </dialog>

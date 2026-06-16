@@ -114,7 +114,6 @@ main h1 {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .controls {
@@ -125,10 +124,24 @@ main h1 {
     gap: 15px;
 }
 
+.control-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 5px;
+}
+
+.control-group label {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+}
+
 .controls input[type="text"] {
     height: 42px;
     width: 100%;
-    max-width: 300px;
     border: 2px solid red;
     border-radius: 25px;
     color: black;
@@ -140,7 +153,6 @@ main h1 {
 .controls select {
     height: 42px;
     width: 100%;
-    max-width: 300px;
     border: 2px solid red;
     border-radius: 25px;
     color: black;
@@ -181,7 +193,6 @@ main h1 {
     font-size: 28px;
     color: #ffd700;
     margin-bottom: 10px;
-    background-color: rgba(0,0,0,0.1);
 }
 
 .team-card p {
@@ -256,7 +267,6 @@ main h1 {
     padding: 3rem;
     color: white;
     font-size: 1.2rem;
-    background-color: black;
 }
 
 .error-message {
@@ -325,7 +335,6 @@ main h1 {
     color: #ffd700;
     margin-bottom: 1rem;
     text-align: center;
-    background-color: #181e38;
 }
 
 .team-detail {
@@ -399,6 +408,7 @@ footer a {
     margin-top: 0.8rem;
     font-weight: bold;
     color: #ffd700;
+    background-color: #181e38;
 }
 
 .attributions-list ul {
@@ -409,8 +419,7 @@ footer a {
 .attributions-list li {
     margin: 0.3rem 0;
     font-size: 0.85rem;
-    color: white;
-    background-color: #16213e;
+    color: #ccc;
 }
 
 @keyframes fadeInUp {
