@@ -94,6 +94,7 @@ header {
     text-align: center;
     border: 1px solid red;
     border-radius: 10px;
+    background-color: rgba(0,0,0,0.8);
 }
 
 .navigation a:hover,
@@ -298,7 +299,7 @@ main h1 {
     position: absolute;
     top: 10px;
     right: 15px;
-    background: red;
+    background: black;
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
@@ -403,5 +404,5 @@ footer a {
 .attributions-list li {
     margin: 0.3rem 0;
     font-size: 0.85rem;
-    color: #ccc;
+    color: white;
 }
