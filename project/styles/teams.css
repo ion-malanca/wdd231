@@ -256,6 +256,7 @@ main h1 {
     padding: 3rem;
     color: white;
     font-size: 1.2rem;
+    background-color: black;
 }
 
 .error-message {
@@ -324,6 +325,7 @@ main h1 {
     color: #ffd700;
     margin-bottom: 1rem;
     text-align: center;
+    background-color: #181e38;
 }
 
 .team-detail {
