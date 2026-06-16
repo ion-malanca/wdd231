@@ -47,6 +47,24 @@
     font-size: 1rem;
     color: #333;
     box-sizing: border-box;
+    background: white;
+}
+
+.form-group select option {
+    color: white;
+    background: #1a1a2e;
+    padding: 8px;
+}
+
+.form-group select option:hover,
+.form-group select option:focus {
+    background: red;
+    color: white;
+}
+
+.form-group select option:checked {
+    background: #ffd700;
+    color: black;
 }
 
 .form-group input:focus,
