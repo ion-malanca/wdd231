@@ -302,7 +302,7 @@ main h1 {
     position: absolute;
     top: 10px;
     right: 15px;
-    background: red;
+    background: black;
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
@@ -324,6 +324,7 @@ main h1 {
     color: #ffd700;
     margin-bottom: 1rem;
     text-align: center;
+    background-color: #181e38;
 }
 
 .driver-detail {
@@ -398,6 +399,7 @@ footer a {
     margin: 0.3rem 0;
     font-size: 0.85rem;
     color: #ccc;
+    background-color: #181e38;
 }
 
 @keyframes fadeInUp {
