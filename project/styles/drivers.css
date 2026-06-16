@@ -94,12 +94,14 @@ header {
     text-align: center;
     border: 1px solid red;
     border-radius: 10px;
+    background-color: rgba(0,0,0,0.8);
 }
 
 .navigation a:hover,
 .navigation a.active {
     background-color: red;
     color: white;
+    border-color: white;
 }
 
 main h1 {
@@ -163,6 +165,7 @@ main h1 {
     flex-direction: column;
     gap: 15px;
     transition: transform 0.3s ease;
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 .driver-card:hover {
@@ -395,4 +398,15 @@ footer a {
     margin: 0.3rem 0;
     font-size: 0.85rem;
     color: #ccc;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
