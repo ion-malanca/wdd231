@@ -8,6 +8,7 @@
     border: 2px solid red;
     animation: fadeIn 0.5s ease;
     margin: 2rem auto;
+    box-sizing: border-box;
 }
 
 .form-container h1 {
@@ -107,6 +108,9 @@
     .form-container {
         padding: 1.5rem;
         margin: 1rem;
+        max-width: calc(100% - 2rem);
+        width: calc(100% - 2rem);
+        border-radius: 15px;
     }
     
     .form-container h1 {
@@ -116,6 +120,38 @@
     .radio-group {
         flex-direction: column;
         gap: 0.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .form-container {
+        padding: 1rem;
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+        width: calc(100% - 1rem);
+    }
+    
+    .form-container h1 {
+        font-size: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 0.85rem;
     }
 }
 
