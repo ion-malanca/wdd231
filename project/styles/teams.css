@@ -410,6 +410,7 @@ footer a {
     margin: 0.3rem 0;
     font-size: 0.85rem;
     color: white;
+    background-color: #16213e;
 }
 
 @keyframes fadeInUp {
